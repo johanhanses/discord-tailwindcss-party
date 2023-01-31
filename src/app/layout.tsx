@@ -1,4 +1,4 @@
-import Servers from './components/Servers'
+import ServerList from './components/ServerList'
 import './globals.css'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -7,7 +7,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head />
       <body>
         <div className="flex h-screen text-gray-100">
-          <Servers />
+          <ServerList />
           {children}
         </div>
       </body>
