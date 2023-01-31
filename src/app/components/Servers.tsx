@@ -1,5 +1,15 @@
+import Image from 'next/image'
+import mirageLogo from '../../../public/server-logos/mirage.png'
+import nextLogo from '../../../public/server-logos/next.png'
+import tailwindLogo from '../../../public/server-logos/tailwind.png'
 import AppLink from './AppLink'
 import DiscordIcon from './DiscordIcon'
+
+const servers = [
+  { id: '1', img: tailwindLogo },
+  { id: '2', img: nextLogo },
+  { id: '3', img: mirageLogo }
+]
 
 export default function Servers() {
   return (
@@ -7,7 +17,16 @@ export default function Servers() {
       <AppLink href="/">
         <DiscordIcon className="h-5 w-7" />
       </AppLink>
-      <AppLink href="/servers/1">S1</AppLink>
+
+      <hr className="mx-2 rounded border-t-2 border-t-white/[.06]" />
+
+      <AppLink href="/servers/1">
+        <Image
+          src={tailwindLogo}
+          priority
+          alt="tailwind logo"
+        />
+      </AppLink>
 
       {/* {[...Array(40)].map((_, i) => (
         <div
