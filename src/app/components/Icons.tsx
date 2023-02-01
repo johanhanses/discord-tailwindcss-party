@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef } from 'react'
 
-export const DiscordIcon = (props: ComponentPropsWithoutRef<'svg'>) => (
+export const Discord = (props: ComponentPropsWithoutRef<'svg'>) => (
   <svg
     aria-hidden="false"
     viewBox="0 0 28 20"
@@ -13,7 +13,7 @@ export const DiscordIcon = (props: ComponentPropsWithoutRef<'svg'>) => (
   </svg>
 )
 
-export const VerifiedIcon = (props: ComponentPropsWithoutRef<'svg'>) => {
+export const Verified = (props: ComponentPropsWithoutRef<'svg'>) => {
   return (
     <svg
       aria-label="Verified"
@@ -30,7 +30,7 @@ export const VerifiedIcon = (props: ComponentPropsWithoutRef<'svg'>) => {
   )
 }
 
-export const CheckIcon = (props: ComponentPropsWithoutRef<'svg'>) => {
+export const Check = (props: ComponentPropsWithoutRef<'svg'>) => {
   return (
     <svg
       aria-hidden="false"
@@ -45,7 +45,7 @@ export const CheckIcon = (props: ComponentPropsWithoutRef<'svg'>) => {
   )
 }
 
-export const ChevronIcon = (props: ComponentPropsWithoutRef<'svg'>) => {
+export const Chevron = (props: ComponentPropsWithoutRef<'svg'>) => {
   return (
     <svg
       viewBox="0 0 18 18"
@@ -60,7 +60,7 @@ export const ChevronIcon = (props: ComponentPropsWithoutRef<'svg'>) => {
   )
 }
 
-export const BookIcon = (props: ComponentPropsWithoutRef<'svg'>) => {
+export const Book = (props: ComponentPropsWithoutRef<'svg'>) => {
   return (
     <svg
       viewBox="0 0 40 40"
@@ -76,7 +76,7 @@ export const BookIcon = (props: ComponentPropsWithoutRef<'svg'>) => {
   )
 }
 
-export const SpeakerphoneIcon = (props: ComponentPropsWithoutRef<'svg'>) => {
+export const Speakerphone = (props: ComponentPropsWithoutRef<'svg'>) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -90,7 +90,7 @@ export const SpeakerphoneIcon = (props: ComponentPropsWithoutRef<'svg'>) => {
   )
 }
 
-export const ArrowComponent = (props: ComponentPropsWithoutRef<'svg'>) => {
+export const Arrow = (props: ComponentPropsWithoutRef<'svg'>) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -106,7 +106,7 @@ export const ArrowComponent = (props: ComponentPropsWithoutRef<'svg'>) => {
   )
 }
 
-export const AddPersonIcon = (props: ComponentPropsWithoutRef<'svg'>) => {
+export const AddPerson = (props: ComponentPropsWithoutRef<'svg'>) => {
   return (
     <svg
       viewBox="0 0 16 16"
@@ -120,7 +120,7 @@ export const AddPersonIcon = (props: ComponentPropsWithoutRef<'svg'>) => {
   )
 }
 
-export const HashtagIcon = (props: ComponentPropsWithoutRef<'svg'>) => {
+export const Hashtag = (props: ComponentPropsWithoutRef<'svg'>) => {
   return (
     <svg
       viewBox="0 0 24 24"
