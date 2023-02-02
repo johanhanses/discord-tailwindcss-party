@@ -1,23 +1,28 @@
 'use client'
 
 import Link, { LinkProps } from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useSelectedLayoutSegments } from 'next/navigation'
 import { ReactNode } from 'react'
 
 interface AppLinkProps extends LinkProps {
   children: ReactNode
+  serverid?: number
 }
 
-export default function AppLink(props: AppLinkProps) {
-  const pathname = usePathname()
-  const isActive = pathname === props.href
+export default function ServerLink(props: AppLinkProps) {
+  const segments = useSelectedLayoutSegments()
+  const serverIdFromPath = segments.at(1)?.split('', 1).at(0)
+  const pathName = usePathname()
+  const isActive = Number(serverIdFromPath) === props.serverid || props.href === pathName
 
   return (
     <div className="group relative rounded-full">
       <div className="absolute -left-3 flex h-full items-center">
         <div
           className={`${
-            isActive ? 'h-10' : 'h-5 scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100'
+            isActive
+              ? 'h-10'
+              : 'h-5 scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100'
           } w-1 origin-left rounded-r bg-white transition-all duration-300`}
         />
       </div>

@@ -14,6 +14,7 @@ export interface serverChannel {
   id: number
   label: string
   icon?: string
+  unread?: boolean
 }
 
 export const allData: ServerData[] = [
@@ -33,9 +34,9 @@ export const allData: ServerData[] = [
         id: 2,
         label: 'Tailwind CSS',
         channels: [
-          { id: 3, label: 'general' },
-          { id: 4, label: 'plugins' },
-          { id: 5, label: 'help' },
+          { id: 3, label: 'general', unread: true },
+          { id: 4, label: 'plugins', unread: true },
+          { id: 5, label: 'help', unread: true },
           { id: 6, label: 'internals' }
         ]
       },
@@ -45,8 +46,8 @@ export const allData: ServerData[] = [
         channels: [
           { id: 7, label: 'tailwind-ui' },
           { id: 8, label: 'headless-ui' },
-          { id: 9, label: 'refactoring-ui' },
-          { id: 10, label: 'heroicons' }
+          { id: 9, label: 'refactoring-ui', unread: true },
+          { id: 10, label: 'heroicons', unread: true }
         ]
       },
       {
@@ -55,7 +56,7 @@ export const allData: ServerData[] = [
         channels: [
           { id: 11, label: 'design' },
           { id: 12, label: 'development' },
-          { id: 13, label: 'random' }
+          { id: 13, label: 'random', unread: true }
         ]
       },
       {
@@ -63,7 +64,7 @@ export const allData: ServerData[] = [
         label: 'Community',
         channels: [
           { id: 14, label: 'jobs' },
-          { id: 15, label: 'showcase' },
+          { id: 15, label: 'showcase', unread: true },
           { id: 16, label: 'bots' }
         ]
       }

@@ -32,7 +32,7 @@ export default function ServerOne({ params: { slug } }: { params: { slug: string
               key={category.id}
             >
               {category.label && (
-                <button className="flex items-center px-0.5 font-title text-xs uppercase tracking-wide">
+                <button className="flex w-full items-center px-0.5 font-title text-xs uppercase tracking-wide hover:text-gray-100">
                   <Icon.Arrow className="mr-0.5 h-3 w-3" />
                   {category.label}
                 </button>
@@ -42,6 +42,7 @@ export default function ServerOne({ params: { slug } }: { params: { slug: string
                   <ChannelLink
                     channel={channel}
                     key={channel.id}
+                    activeChannelId={Number(cid)}
                   />
                 ))}
               </div>
