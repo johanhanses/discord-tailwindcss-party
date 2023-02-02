@@ -1,4 +1,4 @@
-import { ChannelLink } from '@/app/components/ChannelLink'
+import { ChannelList } from '@/app/components/ChannelList'
 import * as Icon from '@/app/components/Icons'
 import { allData } from '@/data'
 
@@ -11,6 +11,8 @@ export default function ServerOne({ params: { slug } }: { params: { slug: string
   const cid = slug.at(-1)
 
   const [data] = getServerData(sid as string)
+  const channel = data.categories.reduce(prev, (next) => {}, {})
+  console.log(channel)
 
   if (!data) return <>No data for this server</>
   return (
@@ -24,31 +26,10 @@ export default function ServerOne({ params: { slug } }: { params: { slug: string
           {data.label}
           <Icon.Chevron className="ml-auto h-[18px] w-[18px] opacity-80" />
         </button>
-
-        <div className="flex-1 space-y-[21px] overflow-y-scroll pt-3 font-medium text-gray-300">
-          {data.categories.map((category) => (
-            <div
-              className="mt-[21px]"
-              key={category.id}
-            >
-              {category.label && (
-                <button className="flex w-full items-center px-0.5 font-title text-xs uppercase tracking-wide hover:text-gray-100">
-                  <Icon.Arrow className="mr-0.5 h-3 w-3" />
-                  {category.label}
-                </button>
-              )}
-              <div className="mt-[5px] space-y-0.5">
-                {category.channels.map((channel) => (
-                  <ChannelLink
-                    channel={channel}
-                    key={channel.id}
-                    activeChannelId={Number(cid)}
-                  />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+        <ChannelList
+          data={data}
+          cid={cid}
+        />
       </div>
 
       <main className="flex flex-1 flex-col bg-gray-700">

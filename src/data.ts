@@ -1,4 +1,4 @@
-interface ServerData {
+export interface ServerData {
   serverId: string
   label: string
   categories: serverCategory[]
